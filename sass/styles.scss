@@ -1,4 +1,4 @@
-@import "compass/reset";
+//@import "compass/reset";
 
 $special-font: 'Fjalla One', sans-serif;
 $regular-font: 'Arial', sans-serif;
@@ -24,18 +24,40 @@ strong {
 	font-family: $regular-font;
 	width: 200px;
 	height: 100%;
+	background-color: #f3f3f3;
+	border: 1px solid #999;
 	-webkit-transition: all .35s;
+	box-sizing: box-border;
 	form {
 		height: 100%;
 	}
 	.moves {
 		height: 50%;
 		overflow: auto;
-		margin-bottom: 10px;
+		margin-bottom: 10/16 + 0em;
+		padding-right: 10/16 + 0em;
 	}
 }
 .settings.off {
 	left: -205px;
+}
+.open-settings {
+	text-transform: uppercase;
+	font-weight: bold;
+	position: absolute;
+	top: 31px;
+	right: -51px;
+	font-size: 12/16 + 0em;
+	display: inline-block;
+	border: 1px solid #999;
+	border-bottom: none;
+	cursor: pointer;
+	padding: 6px 8px;
+	background-color: #f3f3f3;
+	-webkit-transform: rotate(90deg);
+	&:hover {
+		text-decoration: underline;
+	}
 }
 .check {
 	cursor: pointer;
@@ -106,6 +128,16 @@ legend {
 	margin: 0 auto;
 	text-decoration: none;
 	-webkit-transition: all .5s;
+}
+.reset {
+	display: inline-block;
+	padding: 10px 12px 8px;
+	background-color: red;
+	text-transform: uppercase;
+	margin: 20px auto;
+	font-size: 1.5em;
+	font-family: $special-font;
+	color: white;
 }
 .start a:hover {
 	background-color: black;

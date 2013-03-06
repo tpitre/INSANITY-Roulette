@@ -61,7 +61,6 @@ $(document).ready(function() {
 		intervalTime = intervalTime * 1000;
 
 		intervalBreak = ($('.break-interval').val()) ? $('.break-interval').val() : intervalBreak;
-		console.log(intervalBreak);
 	});
 
 	// change slider value
@@ -69,10 +68,10 @@ $(document).ready(function() {
 			breakIntervalValue = $('.break-interval-value');
 
 	$('.time-interval').change(function(){
-	    timeIntervalValue.html(this.value);
+	  timeIntervalValue.html(this.value);
 	});
 	$('.break-interval').change(function(){
-	    breakIntervalValue.html(this.value);
+	  breakIntervalValue.html(this.value);
 	});
 
 	$('.time-interval, .break-interval').change();
@@ -84,6 +83,11 @@ $(document).ready(function() {
   },function(){
     $('input:checkbox').attr('checked','checked');
     $(this).html('Uncheck All');
+  });
+
+  $('.open-settings').on('click', function(event) {
+    $('.settings').toggleClass('on off');
+    event.preventDefault();
   });
 
 });
