@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+		<link type="text/css" rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+
+		<div class="settings">
+			<form>
+				<div class="moves">
+					<span class="check">Uncheck All</span>
+					<fieldset class="move-type move-type-cardio">
+						<legend>Cardio:</legend>
+						<label><input type="checkbox" checked value="Jog"> Jog</label>
+						<label><input type="checkbox" checked value="Jumping Jacks"> Jumping Jacks</label>
+						<label><input type="checkbox" checked value="Heisman"> Heisman</label>
+						<label><input type="checkbox" checked value="Switch Kicks"> Switch Kicks</label>
+						<label><input type="checkbox" checked value="Butt Kicks"> Butt Kicks</label>
+						<label><input type="checkbox" checked value="High Knees"> High Knees</label>
+						<label><input type="checkbox" checked value="Mummy Kicks"> Mummy Kicks</label>
+						<label><input type="checkbox" checked value="Mountain Climbers"> Mountain Climbers</label>
+						<label><input type="checkbox" checked value="In & Out Abs"> In & Out Abs</label>
+						<label><input type="checkbox" checked value="Ski Abs"> Ski Abs</label>
+						<label><input type="checkbox" checked value="Cross Jacks"> Cross Jacks</label>
+						<label><input type="checkbox" checked value="Power Jumps"> Power Jumps</label>
+						<label><input type="checkbox" checked value="Sprint & Hurdle"> Sprint & Hurdle</label>
+						<label><input type="checkbox" checked value="Floor Sprints"> Floor Sprints</label>
+						<label><input type="checkbox" checked value="8 Hooks 4 Jumps"> 8 Hooks 4 Jumps</label>
+						<label><input type="checkbox" checked value="Football Sprints"> Football Sprints</label>
+						<label><input type="checkbox" checked value="Power Knee"> Power Knee</label>
+						<label><input type="checkbox" checked value="Scissor Runs"> Scissor Runs</label>
+						<label><input type="checkbox" checked value="Power Strikes"> Power Strikes</label>
+						<label><input type="checkbox" checked value="High/Low Jab"> High/Low Jab</label>
+						<label><input type="checkbox" checked value="High Knee Oblique"> High Knee Oblique</label>
+						<label><input type="checkbox" checked value="Ski Jumps"> Ski Jumps</label>
+						<label><input type="checkbox" checked value="Hit The Floor"> Hit The Floor</label>
+						<label><input type="checkbox" checked value="Suicide Drills"> Suicide Drills</label>
+						<label><input type="checkbox" checked value="Floor Switch Kicks"> Floor Switch Kicks</label>
+						<label><input type="checkbox" checked value="Burpie"> Burpie</label>
+					</fieldset>
+					<fieldset class="move-type move-type-cardio-resistance">
+						<legend>Cardio/Resistance:</legend>
+						<label><input type="checkbox" checked value="Level 1 Drills"> Level 1 Drills</label>
+						<label><input type="checkbox" checked value="Level 2 Drills"> Level 2 Drills</label>
+						<label><input type="checkbox" checked value="Level 3 Drills"> Level 3 Drills</label>
+						<label><input type="checkbox" checked value="Level 4 Drills"> Level 4 Drills</label>
+						<label><input type="checkbox" checked value="Power Squats"> Power Squats</label>
+						<label><input type="checkbox" checked value="Full Body Drills"> Full Body Drills</label>
+						<label><input type="checkbox" checked value="Globe Jumps"> Globe Jumps</label>
+						<label><input type="checkbox" checked value="Stance Jacks"> Stance Jacks</label>
+						<label><input type="checkbox" checked value="Pedal & Lunge"> Pedal & Lunge</label>
+						<label><input type="checkbox" checked value="Power Jacks"> Power Jacks</label>
+						<label><input type="checkbox" checked value="Push-Up Jacks"> Push-Up Jacks</label>
+						<label><input type="checkbox" checked value="Squat & Jab"> Squat & Jab</label>
+						<label><input type="checkbox" checked value="Plank Punches"> Plank Punches</label>
+						<label><input type="checkbox" checked value="Belt Kicks"> Belt Kicks</label>
+						<label><input type="checkbox" checked value="Squat Speedbag"> Squat Speedbag</label>
+					</fieldset>
+					<fieldset class="move-type move-type-resistance">
+						<legend>Resistance:</legend>
+						<label><input type="checkbox" checked value="Push-Ups"> Push-Ups</label>
+						<label><input type="checkbox" checked value="Elevated Push-Ups"> Elevated Push-Ups</label>
+						<label><input type="checkbox" checked value="Tricep Push-Ups"> Tricep Push-Ups</label>
+						<label><input type="checkbox" checked value="Wide Grip Push-Ups"> Wide Grip Push-Ups</label>
+						<label><input type="checkbox" checked value="Close Grip Push-Ups"> Close Grip Push-Ups</label>
+						<label><input type="checkbox" checked value="Dumbbell Curls"> Dumbbell Curls</label>
+						<label><input type="checkbox" checked value="Pull-Ups"> Pull-Ups</label>
+						<label><input type="checkbox" checked value="Plank"> Plank</label>
+						<label><input type="checkbox" checked value="Tricep Dips"> Tricep Dips</label>
+						<label><input type="checkbox" checked value="Weighted Squats"> Weighted Squats</label>
+						<label><input type="checkbox" checked value="Shoulder Press"> Shoulder Press</label>
+					</fieldset>
+				</div>
+				<label class="slider-label">
+					<input class="slider time-interval" type="range" min="10" max="60" />
+					<p class="note">Time Interval: <strong class="time-interval-value">10</strong></p>
+				</label>
+				<label class="slider-label">
+					<input class="slider break-interval" type="range" min="2" max="10" />
+					<p class="note">Break Interval: <strong class="break-interval-value">2</strong></p>
+				</label>
+
+			</form>
+		</div>
+
+		<div class="start"><a href="#" class="start">START</a></div>
+	  <div class="data hide">READY?</div>
+	  <div class="countdown"></div>
+
+	  <audio controls class="audio" id="audio-horse">
+		  <source src="horse.mp3" type="audio/mpeg">
+		  <source src="horse.ogg" type="audio/ogg">
+		  Your browser does not support this audio format.
+		</audio>
+		<audio controls class="audio" id="audio-shaunt">
+		  <source src="lets-go.mp3" type="audio/mpeg">
+		  <source src="lets-go.ogg" type="audio/ogg">
+		  Your browser does not support this audio format.
+		</audio>
+
+		<footer class="main-footer">
+			<div class="social social-bg">
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsouthleft.com%2Finsanity-roulette%2F&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=312629725518099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+			</div>
+			<div class="social social-twitter">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://southleft.com/insanity-roulette/" data-text="INSANITY Roulette!" data-via="tpitre" data-hashtags="INSANITY">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
