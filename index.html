@@ -84,12 +84,18 @@
 					<input class="slider break-interval" type="range" min="2" max="10" />
 					<p class="note">Break Interval: <strong class="break-interval-value">2</strong></p>
 				</label>
+				<label class="timer-label">
+					<input class="number total-time" type="number" value="45" min="10" max="60">
+					<p class="note">Total Time: <strong class="total-time-value">45</strong> Minutes</p>
+				</label>
 				<a href="" class="reset">Reset</a>
 			</form>
 		</div>
 
 		<div class="start"><a href="#" class="start">START</a></div>
 	  <div class="data hide">READY?</div>
+
+	  <div class="total-time-countdown hide"><span class="time-min">45</span>:<span class="time-sec">00</span></div>
 	  <div class="countdown"></div>
 
 	  <audio controls class="audio" id="audio-horse">
