@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var i = 0,
+	var i = 1,
 			readyTime = 5000,
 			intervalTime = 30,
 			intervalBreak = 6,
@@ -11,8 +11,15 @@ $(document).ready(function() {
 	var insanityMoves = function(){
 
 		var randomMoves = moves[Math.floor(Math.random() * moves.length)];
-	  moveDisplay = (i !== 0 && i % intervalBreak == 0) ? "BREAK" : randomMoves;
-
+	  
+	  if (i !== 0 && i % intervalBreak == 0) {
+		  moveDisplay = "Break";
+		  i = 0;
+	  } 
+	  else { 
+	  	moveDisplay = randomMoves;
+	  }
+	 
 	  $('.data').html(moveDisplay);
 
 	  var countDown = intervalTime / 1000,
