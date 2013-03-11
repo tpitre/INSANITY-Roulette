@@ -105,7 +105,8 @@ legend {
   display: table-cell;
   vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: -2px; }
+  letter-spacing: -2px;
+  display: none; }
 
 .start {
   text-align: center;
@@ -173,6 +174,20 @@ legend {
 
 .show {
   display: block; }
+
+.timeline {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  background-color: #eee; }
+
+.marker {
+  position: relative;
+  left: 0;
+  height: 60px;
+  border-right: 4px solid #666666;
+  background-color: #069; }
 
 @media screen and (min-width: 36.25em) {
   .data {

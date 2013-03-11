@@ -11,15 +11,15 @@ $(document).ready(function() {
 	var insanityMoves = function(){
 
 		var randomMoves = moves[Math.floor(Math.random() * moves.length)];
-	  
+
 	  if (i !== 0 && i % intervalBreak == 0) {
 		  moveDisplay = "Break";
 		  i = 0;
-	  } 
-	  else { 
+	  }
+	  else {
 	  	moveDisplay = randomMoves;
 	  }
-	 
+
 	  $('.data').html(moveDisplay);
 
 	  var countDown = intervalTime / 1000,
@@ -45,25 +45,28 @@ $(document).ready(function() {
 
 	// set total time
 	function totalTime() {
-    var $tt = $('.total-time-countdown'),
-    		$m = $('.time-min'),
-    		$s = $('.time-sec');
+    var $timeContainer = $('.total-time-countdown'),
+    		$min = $('.time-min'),
+    		$sec = $('.time-sec'),
+    		$marker = $('.marker');
 
-    if($m.html() == 0 && $s.html() == '00') {
-      $tt.html('Workout Complete!').addClass('wide');
+    if($min.html() == 0 && $sec.html() == '00') {
+      $timeContainer.html('Workout Complete!').addClass('wide');
       clearInterval(totalTime);
       clearInterval(insanityMoves);
     }
-    if(parseInt($s.html()) <= 0) {
-      $m.html(parseInt($m.html()-1));
-      $s.html(60);
+    if(parseInt($sec.html()) <= 0) {
+      $min.html(parseInt($min.html()-1));
+      $sec.html(60);
     }
-    if(parseInt($s.html()) <= 10) {
-    	$s.html('0' + parseInt($s.html()-1));
+    if(parseInt($sec.html()) <= 10) {
+    	$sec.html('0' + parseInt($sec.html()-1));
     }
     else {
-	    $s.html(parseInt($s.html()-1));
+	    $sec.html(parseInt($sec.html()-1));
     }
+    var markerVal = 100/parseInt($sec.html());
+    $marker.width(markerVal);
   }
 
 	// start everything
@@ -92,8 +95,8 @@ $(document).ready(function() {
 
 		intervalTime = ($('.time-interval').val()) ? $('.time-interval').val() : intervalTime;
 		intervalTime = intervalTime * 1000;
-
 		intervalBreak = ($('.break-interval').val()) ? $('.break-interval').val() : intervalBreak;
+
 	});
 
 	// change slider value
@@ -122,9 +125,33 @@ $(document).ready(function() {
     $(this).html('Uncheck All');
   });
 
+  // setting toggle open/close
   $('.open-settings').on('click', function(event) {
     $('.settings').toggleClass('on off');
     event.preventDefault();
   });
+
+  /*
+$("input:checkbox").each(function() {
+		var savedValue = localStorage.getItem($(this).val());
+		if (savedValue){
+			console.log("in it");
+		 $(this).attr('checked', 'checked');
+		}
+		else {
+			console.log($(this).attr('checked'));
+		 $(this).removeAttr('checked');
+		}
+  });
+
+  $("input:checkbox").on("change", function(){
+  	//localStorage.clear();
+  	console.log(localStorage.getItem('Heisman'));
+		var cbVal = $(this).val();
+		var cbState = $(this).attr('checked');
+		localStorage.setItem(cbVal, cbState);
+		console.log(cbState);
+  });
+*/
 
 });
