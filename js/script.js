@@ -84,24 +84,22 @@ $(document).ready(function() {
 	// start everything
 	var beginMoves = function(){
 
-		/*
-setTimeout(function(){
+		setTimeout(function(){
 			document.getElementById('audio-shaunt').play();
 		}, 1500);
-*/
 
-		/*
-setTimeout(function(){
-			insanityMoves();
-			setInterval(totalTime,1000);
-			setInterval(insanityMoves, intervalTime);
-		}, readyTime);
-*/
 		setTimeout(function(){
 			insanityMoves();
 			setInterval(totalTime,1000);
 			setInterval(insanityMoves, intervalTime);
+		}, readyTime);
+		/*
+setTimeout(function(){
+			insanityMoves();
+			setInterval(totalTime,1000);
+			setInterval(insanityMoves, intervalTime);
 		}, 0);
+*/
 	};
 
 	$('.start a').on('click touchstart', function(){
