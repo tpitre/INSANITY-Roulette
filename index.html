@@ -90,6 +90,15 @@
 				</label>
 				<a href="" class="reset">Reset</a>
 			</form>
+			<footer class="main-footer">
+				<div class="social social-bg">
+					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsouthleft.com%2Finsanity-roulette%2F&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=312629725518099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+				</div>
+				<div class="social social-twitter">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://southleft.com/insanity-roulette/" data-text="INSANITY Roulette!" data-via="tpitre" data-hashtags="INSANITY">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</footer>
 		</div>
 
 		<div class="start"><a href="#" class="start">START</a></div>
@@ -97,9 +106,9 @@
 
 	  <div class="countdown"></div>
 
-	  <audio controls class="audio" id="audio-horse">
-		  <source src="horse.mp3" type="audio/mpeg">
-		  <source src="horse.ogg" type="audio/ogg">
+	  <audio controls class="audio" id="audio-ding">
+		  <source src="ding.mp3" type="audio/mpeg">
+		  <source src="ding.ogg" type="audio/ogg">
 		  Your browser does not support this audio format.
 		</audio>
 		<audio controls class="audio" id="audio-shaunt">
@@ -107,25 +116,14 @@
 		  <source src="lets-go.ogg" type="audio/ogg">
 		  Your browser does not support this audio format.
 		</audio>
-
-		<div class="timeline">
-			<div class="marker">
-				<div class="total-time-countdown hide"><span class="time-min">45</span>:<span class="time-sec">00</span></div>
-			</div>
-		</div>
 		
-		<!--
-<footer class="main-footer">
-			<div class="social social-bg">
-				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsouthleft.com%2Finsanity-roulette%2F&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=312629725518099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
-			</div>
-			<div class="social social-twitter">
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://southleft.com/insanity-roulette/" data-text="INSANITY Roulette!" data-via="tpitre" data-hashtags="INSANITY">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			</div>
-		</footer>
--->
-
+		<div class="total-time-countdown hide"><span class="time-min">45</span>:<span class="time-sec">00</span></div>
+		
+		<div class="timeline hide">
+			<div class="breaks"></div>
+			<div class="marker"></div>
+		</div>
+	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
 		<script src="js/script.js"></script>

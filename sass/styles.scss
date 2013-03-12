@@ -28,6 +28,7 @@ strong {
 	border: 1px solid #999;
 	-webkit-transition: all .35s;
 	box-sizing: box-border;
+	z-index: 10;
 	form {
 		height: 100%;
 	}
@@ -39,7 +40,7 @@ strong {
 	}
 }
 .settings.off {
-	left: -205px;
+	left: -207px;
 }
 .open-settings {
 	text-transform: uppercase;
@@ -161,9 +162,16 @@ legend {
 .total-time-countdown {
 	color: black;
 	bottom: 3px;
-	left: auto;
 	top: auto;
-	color: white;
+	z-index: 5;
+	text-align: right;
+}
+.breaks {
+	width: 2px;
+	background-color: black;
+	position: absolute;
+	height: 70px;
+	bottom: 0;
 }
 .audio {
 	display: none;
@@ -172,8 +180,8 @@ legend {
 }
 .main-footer {
 	position: absolute;
-	bottom: .2em;
-	left: .6em;
+	bottom: 10px;
+	left: 4px;
 }
 .social {
 	float: left;
@@ -198,7 +206,7 @@ legend {
 	left: 0;
 	width: 0;
 	height: 60px;
-	background-color: #069;
+	background-color: lighten(#069, 20%);
 	-webkit-transition: width .3s;
 }
 @media screen and (min-width: 36.25em) {
@@ -226,6 +234,6 @@ legend {
 		font-size: 5em;
 	}
 	.total-time-countdown {
-		//width: 118px;
+		width: 118px;
 	}
 }

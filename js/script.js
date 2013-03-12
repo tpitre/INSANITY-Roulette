@@ -34,7 +34,7 @@ $(document).ready(function() {
 		  if (countDown <= 0) {
 		     clearInterval(counter);
 		     $countDown.html(":" + countDownDisplay);
-		     document.getElementById('audio-horse').play();
+		     document.getElementById('audio-ding').play();
 		     return;
 		  }
 		  $countDown.html(":" + countDown);
@@ -58,7 +58,6 @@ $(document).ready(function() {
 		}
 		else {
   		percentage = (100/totalSecs) + percentage;
-  		console.log(percentage);
 		}
     		
     if ($min.html() == 0 && $sec.html() == '00') {
@@ -80,7 +79,6 @@ $(document).ready(function() {
     
     $marker.width(percentage + '%');
     counter++;
-    console.log(counter);
   }
 
 	// start everything
@@ -110,7 +108,7 @@ setTimeout(function(){
 		beginMoves();
 		$('.start').addClass('hide');
 		$('.settings').addClass('off')
-		$('.data, .total-time-countdown').removeClass('hide');
+		$('.data, .total-time-countdown, .timeline').removeClass('hide');
 
 		$("input[type=checkbox]:checked").each(function() {
 			moves.push($(this).val());
@@ -119,7 +117,9 @@ setTimeout(function(){
 		intervalTime = ($('.time-interval').val()) ? $('.time-interval').val() : intervalTime;
 		intervalTime = intervalTime * 1000;
 		intervalBreak = ($('.break-interval').val()) ? $('.break-interval').val() : intervalBreak;
-
+		
+		var breakMarkers = intervalBreak;
+		
 	});
 
 	// change slider value

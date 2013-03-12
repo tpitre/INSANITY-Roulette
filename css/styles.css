@@ -22,7 +22,8 @@ strong {
   background-color: #f3f3f3;
   border: 1px solid #999;
   -webkit-transition: all .35s;
-  box-sizing: box-border; }
+  box-sizing: box-border;
+  z-index: 10; }
   .settings form {
     height: 100%; }
   .settings .moves {
@@ -32,7 +33,7 @@ strong {
     padding-right: 0.625em; }
 
 .settings.off {
-  left: -205px; }
+  left: -207px; }
 
 .open-settings {
   text-transform: uppercase;
@@ -153,9 +154,16 @@ legend {
 .total-time-countdown {
   color: black;
   bottom: 3px;
-  left: auto;
   top: auto;
-  color: white; }
+  z-index: 5;
+  text-align: right; }
+
+.breaks {
+  width: 2px;
+  background-color: black;
+  position: absolute;
+  height: 70px;
+  bottom: 0; }
 
 .audio {
   display: none;
@@ -164,8 +172,8 @@ legend {
 
 .main-footer {
   position: absolute;
-  bottom: .2em;
-  left: .6em; }
+  bottom: 10px;
+  left: 4px; }
 
 .social {
   float: left;
@@ -190,7 +198,7 @@ legend {
   left: 0;
   width: 0;
   height: 60px;
-  background-color: #069;
+  background-color: #00aaff;
   -webkit-transition: width .3s; }
 
 @media screen and (min-width: 36.25em) {
@@ -213,4 +221,7 @@ legend {
     font-size: 16em; }
 
   .countdown {
-    font-size: 5em; } }
+    font-size: 5em; }
+
+  .total-time-countdown {
+    width: 118px; } }
