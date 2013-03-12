@@ -43,7 +43,7 @@ $(document).ready(function() {
 		i++;
 	};
 	
-	var counter = 0;
+	var timeCounter = 0;
 
 	// set total time
 	function totalTime() {
@@ -53,7 +53,7 @@ $(document).ready(function() {
     		$sec = $('.time-sec'),
     		totalSecs = $('.total-time').val() * 60;
     		
-		if (counter === 0) {
+		if (timeCounter === 0) {
   		percentage = 100/totalSecs;
 		}
 		else {
@@ -78,7 +78,7 @@ $(document).ready(function() {
     }
     
     $marker.width(percentage + '%');
-    counter++;
+    timeCounter++;
   }
 
 	// start everything

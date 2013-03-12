@@ -106,8 +106,7 @@ legend {
   display: table-cell;
   vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: -2px;
-  display: none; }
+  letter-spacing: -2px; }
 
 .start {
   text-align: center;
