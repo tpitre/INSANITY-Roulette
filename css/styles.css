@@ -20,8 +20,8 @@ strong {
   width: 200px;
   height: 100%;
   background-color: #f3f3f3;
-  border: 1px solid #999999;
-  -webkit-transition: all 0.35s;
+  border: 1px solid #999;
+  -webkit-transition: all .35s;
   box-sizing: box-border; }
   .settings form {
     height: 100%; }
@@ -42,7 +42,7 @@ strong {
   right: -51px;
   font-size: 0.75em;
   display: inline-block;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border-bottom: none;
   cursor: pointer;
   padding: 6px 8px;
@@ -75,7 +75,7 @@ legend {
   color: #069;
   text-transform: uppercase;
   padding-bottom: 0.125em;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
   margin-bottom: 0.25em; }
 
 .slider-label {
@@ -125,7 +125,7 @@ legend {
   line-height: 0;
   margin: 0 auto;
   text-decoration: none;
-  -webkit-transition: all 0.5s; }
+  -webkit-transition: all .5s; }
 
 .reset {
   display: inline-block;
@@ -152,8 +152,10 @@ legend {
 
 .total-time-countdown {
   color: black;
-  bottom: 10px;
-  top: auto; }
+  bottom: 3px;
+  left: auto;
+  top: auto;
+  color: white; }
 
 .audio {
   display: none;
@@ -179,15 +181,17 @@ legend {
   width: 100%;
   position: absolute;
   bottom: 0;
+  left: 0;
   height: 60px;
   background-color: #eee; }
 
 .marker {
   position: relative;
   left: 0;
+  width: 0;
   height: 60px;
-  border-right: 4px solid #666666;
-  background-color: #069; }
+  background-color: #069;
+  -webkit-transition: width .3s; }
 
 @media screen and (min-width: 36.25em) {
   .data {
@@ -209,7 +213,4 @@ legend {
     font-size: 16em; }
 
   .countdown {
-    font-size: 5em; }
-
-  .total-time-countdown {
-    width: 118px; } }
+    font-size: 5em; } }

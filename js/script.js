@@ -42,45 +42,68 @@ $(document).ready(function() {
 
 		i++;
 	};
+	
+	var counter = 0;
 
 	// set total time
 	function totalTime() {
     var $timeContainer = $('.total-time-countdown'),
+    		$marker = $('.marker'),
     		$min = $('.time-min'),
     		$sec = $('.time-sec'),
-    		$marker = $('.marker');
-
-    if($min.html() == 0 && $sec.html() == '00') {
+    		totalSecs = $('.total-time').val() * 60;
+    		
+		if (counter === 0) {
+  		percentage = 100/totalSecs;
+		}
+		else {
+  		percentage = (100/totalSecs) + percentage;
+  		console.log(percentage);
+		}
+    		
+    if ($min.html() == 0 && $sec.html() == '00') {
       $timeContainer.html('Workout Complete!').addClass('wide');
       clearInterval(totalTime);
       clearInterval(insanityMoves);
+      beginMoves = '';
     }
-    if(parseInt($sec.html()) <= 0) {
+    if (parseInt($sec.html()) <= 0) {
       $min.html(parseInt($min.html()-1));
       $sec.html(60);
     }
-    if(parseInt($sec.html()) <= 10) {
+    if (parseInt($sec.html()) <= 10) {
     	$sec.html('0' + parseInt($sec.html()-1));
     }
     else {
 	    $sec.html(parseInt($sec.html()-1));
     }
-    var markerVal = 100/parseInt($sec.html());
-    $marker.width(markerVal);
+    
+    $marker.width(percentage + '%');
+    counter++;
+    console.log(counter);
   }
 
 	// start everything
 	var beginMoves = function(){
 
-		setTimeout(function(){
+		/*
+setTimeout(function(){
 			document.getElementById('audio-shaunt').play();
 		}, 1500);
+*/
 
-		setTimeout(function(){
+		/*
+setTimeout(function(){
 			insanityMoves();
 			setInterval(totalTime,1000);
 			setInterval(insanityMoves, intervalTime);
 		}, readyTime);
+*/
+		setTimeout(function(){
+			insanityMoves();
+			setInterval(totalTime,1000);
+			setInterval(insanityMoves, intervalTime);
+		}, 0);
 	};
 
 	$('.start a').on('click touchstart', function(){

@@ -160,8 +160,10 @@ legend {
 }
 .total-time-countdown {
 	color: black;
-	bottom: 10px;
+	bottom: 3px;
+	left: auto;
 	top: auto;
+	color: white;
 }
 .audio {
 	display: none;
@@ -187,15 +189,17 @@ legend {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	height: 60px;
 	background-color: #eee;
 }
 .marker {
 	position: relative;
 	left: 0;
+	width: 0;
 	height: 60px;
-	border-right: 4px solid #666;
 	background-color: #069;
+	-webkit-transition: width .3s;
 }
 @media screen and (min-width: 36.25em) {
 	.data {
@@ -222,6 +226,6 @@ legend {
 		font-size: 5em;
 	}
 	.total-time-countdown {
-		width: 118px;
+		//width: 118px;
 	}
 }
